@@ -4,8 +4,8 @@ public class Field {
 
     private final Figure[][] field;
 
-    Field(int size) {
-        this.field = new Figure[size][size];
+    Field(final int FIELD_SIZE) {
+        this.field = new Figure[FIELD_SIZE][FIELD_SIZE];
 
     }
 
