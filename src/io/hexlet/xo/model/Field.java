@@ -1,5 +1,7 @@
 package io.hexlet.xo.model;
 
+import java.awt.*;
+
 public class Field {
 
     private final Figure[][] field;
