@@ -1,4 +1,4 @@
 package io.hexlet.xo.model.exceptions;
 
-public class AlreadyOccupiedException extends XOException{
+public class AlreadyOccupiedException extends XOException {
 }

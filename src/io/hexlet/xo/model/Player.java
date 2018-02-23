@@ -13,11 +13,11 @@ public class Player {
 
     final String getName() {
 
-        return null;
+        return name;
     }
 
     final Figure getFigure() {
 
-        return null;
+        return figure;
     }
 }

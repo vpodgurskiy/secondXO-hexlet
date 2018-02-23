@@ -1,4 +1,4 @@
 package io.hexlet.xo.model.exceptions;
 
-public class NoWinnerException {
+public class NoWinnerException extends XOException{
 }
