@@ -15,15 +15,20 @@ public class FieldTest {
     }
 
     @Test
-    public void getFigure() {
+    public void setFigure() {
 
         final Field field = new Field(3);
 
-        final Point point = new Point(0,0);
+        final Point inputPoint = new Point(0,0);
 
-        field.setFigure(point, Figure.X);
+        final Figure inputFigure = Figure.X;
 
-        assertEquals(Figure.X, field.getFigure(point));
+        field.setFigure(inputPoint, inputFigure);
+
+        final Figure actualFigure = field.getFigure(inputPoint);
+
+        assertEquals(inputFigure, actualFigure);
 
     }
+
 }
