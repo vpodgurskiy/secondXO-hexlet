@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class Field {
 
-    private final int MIN_COORDINATE = 0;
+    private static final int MIN_COORDINATE = 0;
 
     private final int MAX_COORDINATE;
 
@@ -16,7 +16,6 @@ public class Field {
     public Field(final int FIELD_SIZE) {
         this.MAX_COORDINATE = FIELD_SIZE;
         this.field = new Figure[FIELD_SIZE][FIELD_SIZE];
-
     }
 
     public int getSize() {
