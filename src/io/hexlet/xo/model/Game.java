@@ -4,11 +4,11 @@ public class Game {
 
     private final String name;
 
-    private final Player player;
+    private final Player[] player;
 
     private final Field field;
 
-    public Game(final String name, final Player player, final Field field) {
+    public Game(final String name, final Player[] player, final Field field) {
 
         this.name = name;
         this.player = player;
