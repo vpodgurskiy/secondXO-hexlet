@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class CurrentMoveController {
 
-    final Figure currentMove(final Field field) {
+    public final Figure currentMove(final Field field) {
 
         int countFigure = 0;
 
