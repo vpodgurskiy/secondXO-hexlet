@@ -16,7 +16,7 @@ public class GameTest {
 
         final Game game = new Game(null, null, field);
 
-        assertEquals(field, game.getField(game));
+        assertEquals(field, game.getField());
 
     }
 
@@ -27,7 +27,7 @@ public class GameTest {
 
         final Game game = new Game(name, null, null);
 
-        assertEquals(name, game.getName(game));
+        assertEquals(name, game.getName());
 
     }
 }
