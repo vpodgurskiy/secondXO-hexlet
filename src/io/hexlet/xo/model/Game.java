@@ -4,33 +4,33 @@ public class Game {
 
     private final String name;
 
-    private final Player[] player;
+    private final Player[] players;
 
     private final Field field;
 
-    public Game(final String name, final Player[] player, final Field field) {
+    public Game(final String name, final Player[] players, final Field field) {
 
         this.name = name;
-        this.player = player;
+        this.players = players;
         this.field = field;
 
     }
 
-    final Player[] getPlayers(final Game game) {
+    final Player[] getPlayers() {
 
-        return null;
-
-    }
-
-    final Field getField(final Game game) {
-
-        return game.field;
+        return players;
 
     }
 
-    final String getName(final Game game) {
+    public final Field getField() {
 
-        return game.name;
+        return field;
+
+    }
+
+    final String getName() {
+
+        return name;
 
     }
 }
