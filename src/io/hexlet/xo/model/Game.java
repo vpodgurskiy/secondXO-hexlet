@@ -16,7 +16,7 @@ public class Game {
 
     }
 
-    final Player[] getPlayers() {
+    public final Player[] getPlayers() {
 
         return players;
 
@@ -28,7 +28,7 @@ public class Game {
 
     }
 
-    final String getName() {
+    public final String getName() {
 
         return name;
 
