@@ -1,6 +1,7 @@
 
 import io.hexlet.xo.model.Field;
 import io.hexlet.xo.model.Game;
+import io.hexlet.xo.model.Player;
 import io.hexlet.xo.view.ConsolView;
 
 public class Main {
@@ -10,7 +11,9 @@ public class Main {
 
         final Field field = new Field(3);
 
-        final Game game = new Game("XO", null, field);
+        final Player[] players = consolView.createPlayers();
+
+        final Game game = new Game("XO", players, field);
 
         consolView.show(game);
 
