@@ -6,10 +6,12 @@ import io.hexlet.xo.controller.WinnerController;
 import io.hexlet.xo.model.Field;
 import io.hexlet.xo.model.Figure;
 import io.hexlet.xo.model.Game;
+import io.hexlet.xo.model.Player;
 import io.hexlet.xo.model.exceptions.AlreadyOccupiedException;
 import io.hexlet.xo.model.exceptions.InvalidPointException;
 
 import java.awt.*;
+import java.lang.reflect.Array;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -61,6 +63,25 @@ public class ConsolView {
         }
         return true;
 
+    }
+
+    public final Player[] createPlayers() {
+
+        final Player player1 = new Player(inputPlayerName(Figure.X), Figure.X);
+
+        final Player player2 = new Player(inputPlayerName(Figure.O), Figure.O);
+
+        final Player[] players = {player1, player2};
+
+        return players;
+
+    }
+
+    private String inputPlayerName(final Figure figure) {
+
+        System.out.format("Input figure %s player's name : ", figure);
+        final Scanner scanner = new Scanner(System.in);
+        return scanner.next();
     }
 
     private Point askPoint() {
