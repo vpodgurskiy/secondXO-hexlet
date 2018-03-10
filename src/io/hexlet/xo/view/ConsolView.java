@@ -17,9 +17,9 @@ import java.util.Scanner;
 
 public class ConsolView {
 
-    public final void show(final Game game) {
+    public final void show(final Game<Figure> game) {
 
-        final Field field = game.getField();
+        final Field<Figure> field = game.getField();
 
         System.out.format("Game name: %s\n", game.getName());
 
@@ -31,9 +31,9 @@ public class ConsolView {
         }
     }
 
-    public boolean move(final Game game) {
+    public boolean move(final Game<Figure> game) {
 
-        final Field field = game.getField();
+        final Field<Figure> field = game.getField();
 
         final CurrentMoveController currentMoveController = new CurrentMoveController();
 
@@ -98,7 +98,7 @@ public class ConsolView {
         }
     }
 
-    private void printLine(final Field field, final int i) {
+    private void printLine(final Field<Figure> field, final int i) {
 
         for (int j = 0; j < field.getSize(); j++) {
             if (j != 0) {
