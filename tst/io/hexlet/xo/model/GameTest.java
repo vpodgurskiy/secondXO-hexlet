@@ -12,9 +12,9 @@ public class GameTest {
     @Test
     public void getField() {
 
-        final Field field = new Field(3);
+        final Field<Field> field = new Field(3);
 
-        final Game game = new Game(null, null, field);
+        final Game<Game> game = new Game(null, null, field);
 
         assertEquals(field, game.getField());
 
@@ -25,7 +25,7 @@ public class GameTest {
 
         final String name = "XO";
 
-        final Game game = new Game(name, null, null);
+        final Game<Game> game = new Game(name, null, null);
 
         assertEquals(name, game.getName());
 

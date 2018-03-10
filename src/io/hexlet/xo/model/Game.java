@@ -1,14 +1,14 @@
 package io.hexlet.xo.model;
 
-public class Game {
+public class Game<T> {
 
     private final String name;
 
     private final Player[] players;
 
-    private final Field field;
+    private final Field<T> field;
 
-    public Game(final String name, final Player[] players, final Field field) {
+    public Game(final String name, final Player[] players, final Field<T> field) {
 
         this.name = name;
         this.players = players;
@@ -22,7 +22,7 @@ public class Game {
 
     }
 
-    public final Field getField() {
+    public final Field<T> getField() {
 
         return field;
 
