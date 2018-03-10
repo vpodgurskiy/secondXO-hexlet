@@ -11,7 +11,6 @@ import io.hexlet.xo.model.exceptions.AlreadyOccupiedException;
 import io.hexlet.xo.model.exceptions.InvalidPointException;
 
 import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -22,6 +21,8 @@ public class ConsolView {
         final Field<Figure> field = game.getField();
 
         System.out.format("Game name: %s\n", game.getName());
+
+        showPlayers(game);
 
         for (int i = 0; i < field.getSize(); i++) {
             if (i != 0) {
@@ -75,6 +76,13 @@ public class ConsolView {
 
         return players;
 
+    }
+
+    private void showPlayers(final Game<Figure> game) {
+        System.out.println("Players:");
+        for (Player player : game) {
+            System.out.format("Player name %s, figure %s\n", player.getName(), player.getFigure());
+        }
     }
 
     private String inputPlayerName(final Figure figure) {
