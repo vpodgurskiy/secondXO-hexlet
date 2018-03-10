@@ -23,7 +23,7 @@ public class FieldTest {
 
         final int FIELD_SIZE = 3;
 
-        final Field field = new Field(FIELD_SIZE);
+        final Field<Figure> field = new Field(FIELD_SIZE);
 
         final Point inputPoint = new Point(0,0);
 
