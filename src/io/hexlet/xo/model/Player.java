@@ -11,12 +11,12 @@ public class Player {
         this.figure = figure;
     }
 
-    final String getName() {
+    public final String getName() {
 
         return name;
     }
 
-    final Figure getFigure() {
+    public final Figure getFigure() {
 
         return figure;
     }
