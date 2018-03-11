@@ -1,8 +1,7 @@
 package io.hexlet.xo.model;
 
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Game<T> implements Iterable<Player> {
 
@@ -40,7 +39,22 @@ public class Game<T> implements Iterable<Player> {
 
     @Override
     public Iterator<Player> iterator() {
-        final List<Player> playersList = Arrays.asList(players);
-        return playersList.iterator();
+        return new PlayerIterator();
+    }
+
+    private class PlayerIterator implements Iterator<Player> {
+
+        private int current = 0;
+
+        @Override
+        public boolean hasNext() {
+            return Game.this.players.length > current;
+        }
+
+        @Override
+        public Player next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            return Game.this.players[current++];
+        }
     }
 }
